@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
+## 20171128 normalize.css 추가
+- npm i normalize.css 
+- add "../node_modules/normalize.css/normalize.css" in apps[0].styles in the file angular-cli.json
+
+- Reference [install normalize.css](https://stackoverflow.com/questions/38409773/angular-2-how-to-correctly-automatically-import-normalize-css)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
