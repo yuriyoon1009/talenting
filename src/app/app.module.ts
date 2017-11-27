@@ -1,3 +1,5 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './modules/material.module';
 import { HomeComponent } from './container/home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,6 +14,7 @@ import { HostingComponent } from './container/hosting/hosting.component';
 import { RepresentationComponent } from './container/hosting/representation/representation.component';
 import { HouseComponent } from './container/hosting/house/house.component';
 import { AddressComponent } from './container/hosting/address/address.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,7 +31,7 @@ import { AddressComponent } from './container/hosting/address/address.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, MaterialModule, ReactiveFormsModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
