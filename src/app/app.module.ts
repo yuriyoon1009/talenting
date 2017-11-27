@@ -12,6 +12,8 @@ import { HostingComponent } from './container/hosting/hosting.component';
 import { RepresentationComponent } from './container/hosting/representation/representation.component';
 import { HouseComponent } from './container/hosting/house/house.component';
 import { AddressComponent } from './container/hosting/address/address.component';
+import { DescriptionComponent } from './container/editprofile/description/description.component';
+import { PhotoComponent } from './container/editprofile/photo/photo.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { AddressComponent } from './container/hosting/address/address.component'
     HostingComponent,
     RepresentationComponent,
     HouseComponent,
-    AddressComponent
+    AddressComponent,
+    DescriptionComponent,
+    PhotoComponent
   ],
   imports: [
     BrowserModule,
