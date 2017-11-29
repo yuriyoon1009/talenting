@@ -1,27 +1,9 @@
 
 
+    .block{
+        display: block;
+    }
 
-.header{background:#FBFBFB; border-bottom:1px solid #E4E4E4; font-size:15px;}
-.search_area{position:relative;}
-.search{position:absolute; 
-    background:#fff; border:1px solid #DBDBDB;
-    left:0; top:15px; width:70%; height:50px;
-    border-radius:4px; cursor:pointer; color:#484848;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-indent:5px;
-}
-.search button{line-height:48px;}
+    mat-card { width:80%; margin:0 auto;}
 
-/*
-.nav{background:#FAFAFA; border-bottom:1px solid #E4E4E4;}
-.spacer{flex:1 1 auto; background:red}
-
-mat-grid-list{background:yellow}
-mat-grid-tile{background:red}
-*/
-
-/*
-::ng-deep mat-grid-list mat-grid-tile.s .mat-figure{
-    display:block !important;
-}
-*/
-
+    .date{float:left}
