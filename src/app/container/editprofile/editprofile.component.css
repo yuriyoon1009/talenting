@@ -1,9 +1,18 @@
 
+    .content{width:800px; border:1px solid #DCE0E0;
+    margin:50px auto;}
+    .content-header {width:100%; font-size:16px; color:#484848;
+    height:40px; background: #EDEFED; line-height:40px; text-indent:3%;
+    padding-top:5px; border-bottom:1px solid #DCE0E0;}
+    .content-body{width:90%; padding:20px 5%;}
+    label{width:90px; padding-right:10px; display:inline-block; text-align:right;}
+    input{width:236px; height:36px; border:1px solid #aaa; text-indent:8px;}
+    input:focus{outline-width:2px;}
+    select:focus{outline-width:1px;}
+    select {-moz-appearance: none; -webkit-appearance: none;
+    padding:12px 2em 12px 12px; background:#fff; border-radius:2px;
+    border:1px solid #aaa;}
+    .info{color:#76768C; display:block; margin:6px 0 0 75px; font-size:14px;}
+   /* select option {margin:20px;}*/
+   /* bootstrap */
 
-    .block{
-        display: block;
-    }
-
-    mat-card { width:80%; margin:0 auto;}
-
-    .date{float:left}

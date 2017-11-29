@@ -19,6 +19,7 @@ import { DescriptionComponent } from './container/editprofile/description/descri
 import { PhotoComponent } from './container/editprofile/photo/photo.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     PhotoComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, FormsModule,
     AppRoutingModule, MaterialModule, ReactiveFormsModule, BrowserAnimationsModule
   ],
   providers: [],
