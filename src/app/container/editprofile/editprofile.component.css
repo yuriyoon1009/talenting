@@ -9,6 +9,7 @@
     height:50px; background: #EDEFED; line-height:50px; text-indent:3%;
     border-bottom:1px solid #DCE0E0;}
     .content-body{width:90%; padding:20px 5%;}
+    .alert{width:100%; background:red;}
     label{width:90px; padding-right:10px; 
        display:inline-block; text-align:right;}
     input{width:236px; height:36px; border:1px solid #aaa; text-indent:8px;}

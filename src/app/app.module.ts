@@ -18,8 +18,7 @@ import { AddressComponent } from './container/hosting/address/address.component'
 import { DescriptionComponent } from './container/editprofile/description/description.component';
 import { PhotoComponent } from './container/editprofile/photo/photo.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
-import { FormsModule } from '@angular/forms';
+// import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,8 +35,8 @@ import { FormsModule } from '@angular/forms';
     PhotoComponent
   ],
   imports: [
-    BrowserModule, FormsModule,
-    AppRoutingModule, MaterialModule, ReactiveFormsModule, BrowserAnimationsModule
+    BrowserModule, ReactiveFormsModule,
+    AppRoutingModule, MaterialModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
