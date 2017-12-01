@@ -1,3 +1,96 @@
-<p>
-  home works!
-</p>
+<!--header-->
+<div class="header">
+  <mat-grid-list cols="12" rowHeight="80px" [gutterSize]="3">
+    <!--logo area-->
+    <div class="logo_area">
+      <mat-grid-tile colspan="1">
+        <h1>
+          <a href="#" title="logo">
+            <img alt="logo"/>
+          </a>
+        </h1>
+      </mat-grid-tile>
+    </div>
+    <!--logo area-->
+    <!--search area-->
+    <div class="search_area">
+      <mat-grid-tile [colspan]="restColspan()">
+        <input type="search" placeholder="검색" class="search"/>
+      </mat-grid-tile>
+    </div>
+    <!--search area-->
+    <!--nav-->
+    <div class="nav">
+      <mat-grid-tile *ngFor="let list of lists" [colspan]="list.cols">{{list.title}}</mat-grid-tile>
+    </div>
+    <!--nav-->
+  </mat-grid-list>
+</div>
+<!--header-->
+<!--content-->
+<div class="content-wrap">
+  <h1 class="content-title">탈렌팅 둘러보기</h1>
+  <ul>
+    <li class="content">
+      <a>
+        <p>
+          <img src="../../assets/img1.jpg" alt="img"/>
+          <span>숙소</span>
+        </p>
+      </a>
+    </li>
+    <li class="content">
+        <a>
+          <p>
+            <img src="../../assets/img2.jpg" alt="img"/>
+            <span>이벤트</span>
+          </p>
+        </a>
+    </li>
+    <li class="content">
+        <a>
+          <p>
+            <img src="../../assets/img3.jpg" alt="img"/>
+            <span>레스토랑</span>
+          </p>
+        </a>
+      </li>
+  </ul>
+</div>
+<!--content-->
+<!--trip-->
+<div class="trip-content section">
+  <h1>
+    트립
+  </h1>
+  <ul>
+    <li>
+      <p><img src="../../assets/img4.jpg"/></p>
+      <p>호텔</p>
+    </li>
+    <li>
+      <p><img src="../../assets/img5.jpg"/></p>
+      <p>호텔</p>
+    </li>
+    <li>
+      <p><img src="../../assets/img6.jpg"/></p>
+      <p>호텔</p>
+    </li>
+    <li>
+      <p><img src="../../assets/img7.jpg"/></p>
+      <p>호텔</p>
+    </li>
+  </ul>
+</div>
+<div class="trip-content section">
+    <h1>
+      트립
+    </h1>
+    <ul>
+      <li><img src="../../assets/img4.jpg"/></li>
+      <li><img src="../../assets/img5.jpg"/></li>
+      <li><img src="../../assets/img6.jpg"/></li>
+      <li><img src="../../assets/img7.jpg"/></li>
+    </ul>
+  </div>
+

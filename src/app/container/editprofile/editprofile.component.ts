@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   <div class="wrapper">
     <div class="edit-profile-section">
         <!--sidenav-->
+        <!--component 별로 분류하기-->
         <div class="sidenav">
           <ul>
               <li>프로필 수정</li>
@@ -160,8 +161,6 @@ export class EditprofileComponent implements OnInit {
     {value: '부산'},
     {value: '대구'}
   ]
-
-
 
   months: number[] = Array.from(new Array(12), (x, i) => i + 1);
   days: number[] = Array.from(new Array(31), (x, i) => i + 1);

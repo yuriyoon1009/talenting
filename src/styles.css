@@ -4,3 +4,5 @@
 html{color:#484848;}
 label{font-weight:500;}
 ul{list-style: none;}
+a{display: block; color:#484848; font-size:15px;}
+a:focus, a:hover{text-decoration: none; cursor:pointer;}
