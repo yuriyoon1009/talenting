@@ -13,16 +13,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
           </ul>
         </div>
         <!--sidenav-->
-        <!--form action="#" method="post"-->
-        <!--1. 모듈에 FormsModule을 추가하기-->
-        <!--2. form 요소에 NgForm 디렉티브가 적용되어 템플릿 기반 폼으로 동작-->
-        <!--3. 탬풀랏 가번 폼에서는 submit 이벤트(데이터를 서버로 전송)
-        ngSubmit 이벤트 사용한다 -->
+        <!--content-->
         <div class="content-wrap">
           <div class="content-header">필수사항</div>
             <div class="content-body">
               <form [formGroup]="userForm" novalidate>
-                  <div>
+                  <div class="form-label">
                     <label for="이름">이름</label>
                     <input  type="text" name="firstName" placeholder="이름"
                     formControlName="firstName" required/>
@@ -30,27 +26,26 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
                       이름을 입력하세요!
                     </span>
                   </div>
-                  <div>
+                  <div class="form-label">
                     <label for="성">성</label>
                     <input type="text" name="lastName" placeholder="성" formControlName="lastName"/>
                     <span *ngIf="lastName.errors?.required && lastName.touched" class="info">
                       성을 입력하세요!
                     </span>
                   </div>
-                  <div>
-                  <!-- [attr.selected]=" i == 1  ? 'selected' : '' "-->
+                  <div class="form-label">
+                    <!-- [attr.selected]=" i == 1  ? 'selected' : '' "-->
                     <label for="성별">성별</label>
                     <select name="se" formControlName="se">
                       <option
                         *ngFor="let s of se; let i=index"
                         [selected]="(s.value =='여자' ? true : null)"
-                        [value]="s.value"
-                      >
+                        [value]="s.value">
                         {{s.value}}
                       </option>
                     </select>
                   </div>
-                  <div>
+                  <div class="form-label">
                       <label for="생년월일">생년월일</label>
                       <select name="months">
                         <option value selected="selected">월</option>
@@ -68,7 +63,39 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
                         [value]="year">{{year}}</option>
                       </select>
                   </div>
-                  <div>
+                  <div class="form-label">
+                      <label for="email">이메일</label>
+                      <input type="email" name="email" placeholder="email">
+                  </div>
+                  <div class="form-label">
+                    <label for="선호하는 언어">선호하는 언어</label>
+                    <select name="years">
+                      <option value selected="selected">{{languages[0].value}}</option>
+                      <option *ngFor="let language of languages"
+                      [value]="language.value">{{ language.value }}</option>
+                    </select>
+                  </div>
+                  <div class="form-label">
+                    <label for="선호하는 언어">국가, 지역</label>
+                    <select name="country">
+                      <option value selected="selected">{{countries[0].value}}</option>
+                      <option *ngFor="let country of countries"
+                      [value]="country.value">{{ country.value }}</option>
+                    </select>
+                    <select name="prefectrue">
+                      <option value selected="selected">{{prefectures[0].value}}</option>
+                      <option *ngFor="let prefecture of prefectures"
+                      [value]="prefecture.value">{{ prefecture.value }}</option>
+                    </select>
+                  </div>
+                  <div class="intro">
+                    <label for="자기소개">자기소개</label>
+                    <textarea rows="4"></textarea>
+                    <span class="info">탈렌팅은 사람들간의 관계를 기반으로 만들어졌습니다. 회원님이 어떤 사람인지
+                    알려주세요. 가장 좋아하는 여행지, 책, 영화, TV 프로그램, 음악, 음식 등
+                    뭐든지 좋습니다.</span>
+                  </div>
+                  <div class="form-submit">
                     <!-- submit-btn -->
                     <input type="submit" value="저장하기" class="form-control submit-btn"
                     [disabled]="userForm.invalid">
@@ -84,42 +111,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
         </div>
     </div>
   </div>
-  <!--
-    
-               
-                
-                <div>
-                  <label for="email">이메일</label>
-                  <input type="email" name="email" placeholder="email">
-                  <!-- <div>{{email.value}}</div> -->
-                  <!--[(ngModel)]="user.email" #email="ngModel"-->
-                  <!-- <em *ngIf="email.errors?.pattern">email 형식이 맞지 않습니다.</em>-->
-         <!--         </div>
-                  <p>
-                    <label for="선호하는 언어">선호하는 언어</label>
-                    <select name="years">
-                      <option value selected="selected">{{languages[0].value}}</option>
-                      <option *ngFor="let language of languages"
-                      [value]="language.value">{{ language.value }}</option>
-                    </select>
-                  </p>
-                  <p>
-                    <label for="거주 도시">거주 도시</label>
-                    <input type="text" name="whereIam"
-                    placeholder="예: 프랑스 파리, 뉴욕 브루클린, 일리노이주 시카고"
-                    class="whereIam"/>
-                  </p>
-                  <p class="intro">
-                    <label for="자기소개">자기소개</label>
-                    <textarea rows="4"></textarea>
-                    <span class="info">탈렌팅은 사람들간의 관계를 기반으로 만들어졌습니다. 회원님이 어떤 사람인지
-                    알려주세요. 가장 좋아하는 여행지, 책, 영화, TV 프로그램, 음악, 음식 등
-                    뭐든지 좋습니다.</span>
-                  </p>
-                  <p>
-                    <input type="submit" value="저장하기" class="submit-btn">
-                  </p>
-  -->
   `,
   styleUrls: ['./editprofile.component.css']
 })
@@ -157,6 +148,21 @@ export class EditprofileComponent implements OnInit {
     {value: 'English'}
   ];
 
+  countries: any[] = [
+    {value: '한국'},
+    {value: '일본'},
+    {value: '프랑스'},
+    {value: '미국'}
+  ]
+
+  prefectures: any[] = [
+    {value: '서울'},
+    {value: '부산'},
+    {value: '대구'}
+  ]
+
+
+
   months: number[] = Array.from(new Array(12), (x, i) => i + 1);
   days: number[] = Array.from(new Array(31), (x, i) => i + 1);
   years: number[] = Array.from(new Array(40), (x, i) => 1999 - i);
@@ -190,23 +196,4 @@ export class EditprofileComponent implements OnInit {
   onSubmit() {
     console.log(this.userForm);
   }
- /* tests = [
-    {value: '여자'},
-    {value: '남자'}
-  ];
-  colors = [
-    {value: 'red', label: 'Red'},
-    {value: 'green', label: 'Green'},
-    {value: 'blue', label: 'Blue'},
-    {value: 'cyan', label: 'Cyan'},
-    {value: 'magenta', label: 'Magenta'},
-    {value: 'yellow', label: 'Yellow'},
-    {value: 'black', label: 'Black'},
-  ];
-  constructor(public fb: FormBuilder) {}
-  ngOnInit() {
-    this.editProfile = this.fb.group({
-      firstName: ['', [Validators.required]]
-    });
-  }*/
 }
